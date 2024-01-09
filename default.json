@@ -1,0 +1,67 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Common renovate config for Stateshifter Labs Projects",
+  "extends": [
+    "config:base"
+  ],
+  "baseBranches": [
+    "main"
+  ],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "rangeStrategy": "pin",
+  "platformAutomerge": true,
+  "minimumReleaseAge": "7d",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "labels": ["dev dependencies"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "labels": ["runtime dependencies"]
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "semanticCommitType": "fix"
+    }
+  ]
+}
