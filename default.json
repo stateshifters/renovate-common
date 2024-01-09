@@ -12,6 +12,7 @@
   "rangeStrategy": "pin",
   "platformAutomerge": true,
   "minimumReleaseAge": "7d",
+  "schedule": ["at any time"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
