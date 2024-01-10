@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "automerge": true,
+      "semanticCommitType": "fix",
+      "groupName": "react monorepo"
+    },
+    {
+      "matchPackageNames": [
+        "react-email"
+      ],
+      "matchPackagePrefixes": [
+        "@react-email/"
+      ],
+      "automerge": true,
+      "groupName": "react email dependencies"
+    }
+  ]
+}

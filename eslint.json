@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "eslint"
+      ],
+      "matchPackagePatterns": [
+        "*.eslint.*"
+      ],
+      "automerge": true,
+      "groupName": "eslint dependencies"
+    },
+    {
+      "matchPackageNames": [
+        "eslint-plugin-security"
+      ],
+      "allowedVersions": "1.7.1"
+    }
+  ]
+}

@@ -2,7 +2,15 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "extends": [
-    "config:base"
+    "config:base",
+    "github>stateshifters/renovate-common:aws",
+    "github>stateshifters/renovate-common:conform",
+    "github>stateshifters/renovate-common:eslint",
+    "github>stateshifters/renovate-common:engines",
+    "github>stateshifters/renovate-common:i18next",
+    "github>stateshifters/renovate-common:posthog",
+    "github>stateshifters/renovate-common:react",
+    "github>stateshifters/renovate-common:remix"
   ],
   "baseBranches": [
     "main"
@@ -15,6 +23,11 @@
   "prHourlyLimit": 0,
   "schedule": ["at any time"],
   "packageRules": [
+    {
+      "matchCurrentVersion": "<1.0.0",
+      "automerge": false,
+      "description": "Do not automerge releases that are less than 1.0.0. They are highly likely to be breaking changes."
+    },
     {
       "matchDepTypes": ["devDependencies"],
       "addLabels": ["dev dependencies"],
@@ -44,7 +57,8 @@
         "major"
       ],
       "automerge": false,
-      "semanticCommitType": "chore"
+      "semanticCommitType": "chore",
+      "prPriority": 15
     },
     {
       "matchDepTypes": [
@@ -65,7 +79,8 @@
         "major"
       ],
       "automerge": false,
-      "semanticCommitType": "fix"
+      "semanticCommitType": "fix",
+      "prPriority": 6
     }
   ]
 }
