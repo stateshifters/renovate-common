@@ -6,7 +6,7 @@
         "eslint"
       ],
       "matchPackagePatterns": [
-        "*.eslint.*"
+        ".*eslint.*"
       ],
       "automerge": true,
       "groupName": "eslint dependencies"
