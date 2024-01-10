@@ -56,7 +56,7 @@
       "matchUpdateTypes": [
         "major"
       ],
-      "automerge": false,
+      "automerge": true,
       "semanticCommitType": "chore",
       "prPriority": 15
     },
