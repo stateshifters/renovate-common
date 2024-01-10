@@ -16,11 +16,13 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "addLabels": ["dev dependencies"]
+      "addLabels": ["dev dependencies"],
+      "prPriority": 10
     },
     {
       "matchDepTypes": ["dependencies"],
-      "addLabels": ["runtime dependencies"]
+      "addLabels": ["runtime dependencies"],
+      "prPriority": 5
     },
     {
       "matchDepTypes": [
