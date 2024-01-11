@@ -5,6 +5,10 @@
     {
       "automerge": true,
       "groupName": "local developer dependencies",
+      "matchPackagePrefixes": [
+        "@commitlint",
+        "@jscpd"
+      ],
       "matchPackageNames": [
         "@npmcli/package-json",
         "jscpd",

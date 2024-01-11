@@ -3,7 +3,8 @@
   "packageRules": [
     {
       "matchPackagePrefixes": [
-        "@testing-library"
+        "@testing-library",
+        "@types/testing-library"
       ],
       "automerge": true,
       "groupName": "testing library dependencies"
@@ -11,6 +12,10 @@
     {
       "matchPackagePatterns": [
         ".*vitest.*"
+      ],
+      "matchPackageNames": [
+        "@vitest/coverage-c8",
+        "c8"
       ],
       "automerge": true,
       "groupName": "vitest dependencies"
@@ -21,6 +26,13 @@
       ],
       "automerge": true,
       "groupName": "jest dependencies"
+    },
+    {
+      "matchPackagePatterns": [
+        ".*jsdom.*"
+      ],
+      "automerge": true,
+      "groupName": "jsdom dependencies"
     }
   ]
 }
