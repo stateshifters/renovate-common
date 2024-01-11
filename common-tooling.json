@@ -6,11 +6,15 @@
       "automerge": true,
       "groupName": "local developer dependencies",
       "matchPackageNames": [
+        "@npmcli/package-json",
+        "jscpd",
+        "lefthook",
+        "npmignore",
+        "npm-run-all",
         "rimraf",
         "ts-node",
-        "wait-on",
-        "@npmcli/package-json",
-        "npmignore"
+        "tsx",
+        "wait-on"
       ]
     }
   ]
