@@ -8,6 +8,9 @@
         ".*postcss.*",
         ".*autoprefixer.*",
         ".*cssnano.*"
+      ],
+      "addLabels": [
+        "runtime dependencies"
       ]
     }
   ]
