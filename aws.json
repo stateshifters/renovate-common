@@ -5,7 +5,8 @@
       "ignoreUnstable": false,
       "matchPackageNames": [
         "aws-cdk",
-        "aws-cdk-lib"
+        "aws-cdk-lib",
+        "constructs"
       ],
       "matchPackagePrefixes": [
         "@aws-cdk/",
