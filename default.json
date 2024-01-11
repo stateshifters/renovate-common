@@ -6,6 +6,7 @@
     "github>stateshifters/renovate-common:aws",
     "github>stateshifters/renovate-common:common-tooling",
     "github>stateshifters/renovate-common:conform",
+    "github>stateshifters/renovate-common:esbuild",
     "github>stateshifters/renovate-common:eslint",
     "github>stateshifters/renovate-common:engines",
     "github>stateshifters/renovate-common:i18next",
