@@ -10,6 +10,7 @@
         "@jscpd"
       ],
       "matchPackageNames": [
+        "@evilmartians/lefthook",
         "@npmcli/package-json",
         "jscpd",
         "lefthook",
