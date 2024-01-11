@@ -5,7 +5,9 @@
       "automerge": true,
       "groupName": "postcss dependencies",
       "matchPackagePatterns": [
-        ".*postcss.*"
+        ".*postcss.*",
+        ".*autoprefixer.*",
+        ".*cssnano.*"
       ]
     }
   ]
