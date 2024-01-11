@@ -12,7 +12,8 @@
     "github>stateshifters/renovate-common:react",
     "github>stateshifters/renovate-common:remix",
     "github>stateshifters/renovate-common:stylelint",
-    "github>stateshifters/renovate-common:testing"
+    "github>stateshifters/renovate-common:testing",
+    "github>stateshifters/renovate-common:webpack"
   ],
   "baseBranches": [
     "main"

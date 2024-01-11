@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        ".*webpack.*"
+      ],
+      "automerge": true,
+      "groupName": "webpack dependencies"
+    }
+  ]
+}
