@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Common dev only tools that have no effect on the products",
+  "packageRules": [
+    {
+      "automerge": true,
+      "groupName": "local developer dependencies",
+      "matchPackageNames": [
+        "rimraf",
+        "ts-node",
+        "wait-on",
+        "@npmcli/package-json",
+        "npmignore"
+      ]
+    }
+  ]
+}
