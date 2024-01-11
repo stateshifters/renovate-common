@@ -17,7 +17,7 @@
       "matchUpdateTypes": [
         "major"
       ],
-      "prPriority": 0,
+      "prPriority": -100,
       "matchPackagePatterns": [
         ".*remix.*"
       ],
