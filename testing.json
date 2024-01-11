@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "@testing-library"
+      ],
+      "automerge": true,
+      "groupName": "testing library dependencies"
+    },
+    {
+      "matchPackagePatterns": [
+        ".*vitest.*"
+      ],
+      "automerge": true,
+      "groupName": "vitest dependencies"
+    },
+    {
+      "matchPackagePatterns": [
+        ".*jest.*"
+      ],
+      "automerge": true,
+      "groupName": "jest dependencies"
+    }
+  ]
+}
