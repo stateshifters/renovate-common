@@ -2,6 +2,22 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchPackagePatterns": [
+        ".*remix.*"
+      ],
+      "automerge": true,
+      "semanticCommitType": "fix",
+      "groupName": "remix dependencies"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "prPriority": 0,
       "matchPackagePatterns": [
         ".*remix.*"
       ],
