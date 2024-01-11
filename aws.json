@@ -8,6 +8,9 @@
         "aws-cdk-lib",
         "constructs"
       ],
+      "addLabels": [
+        "runtime dependencies"
+      ],
       "matchPackagePrefixes": [
         "@aws-cdk/",
         "aws-cdk-"
