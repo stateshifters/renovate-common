@@ -28,7 +28,7 @@
   "platformAutomerge": true,
   "minimumReleaseAge": "7d",
   "prHourlyLimit": 0,
-  "schedule": ["* * * * *"],
+  "schedule": ["every hour"],
   "packageRules": [
     {
       "matchCurrentVersion": "<1.0.0",
