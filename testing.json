@@ -10,12 +10,17 @@
       "groupName": "testing library dependencies"
     },
     {
+      "matchPackagePrefixes": [
+        "@vitejs/",
+        "vite-"
+      ],
       "matchPackagePatterns": [
         ".*vitest.*"
       ],
       "matchPackageNames": [
         "@vitest/coverage-c8",
-        "c8"
+        "c8",
+        "vite"
       ],
       "automerge": true,
       "groupName": "vitest dependencies"
