@@ -22,8 +22,6 @@
   "baseBranches": [
     "main"
   ],
-  "internalChecksFilter": "flexible",
-  "branchConcurrentLimit": 0,
   "semanticCommits": "enabled",
   "semanticCommitType": "chore",
   "rangeStrategy": "pin",
