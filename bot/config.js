@@ -1,12 +1,6 @@
 module.exports = {
+  token: process.env.GITHUB_TOKEN,
   onboarding: true,
-  hostRules: [
-    {
-      hostType: "github",
-      matchHost: "github.com",
-      token: process.env.GITHUB_TOKEN
-    }
-  ],
   onboardingConfig: {
     $schema: "https://docs.renovatebot.com/renovate-schema.json",
     extends: [
