@@ -7,6 +7,7 @@ module.exports = {
       token: process.env.GITHUB_TOKEN
     }
   ],
+  token: process.env.GITHUB_TOKEN,
   onboardingConfig: {
     $schema: "https://docs.renovatebot.com/renovate-schema.json",
     extends: [
