@@ -2,7 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
-    "github-actions"
+    "github-actions",
+    "gradle-wrapper"
   ],
   "extends": [
     "config:base",
@@ -33,6 +34,31 @@
   "prHourlyLimit": 0,
   "schedule": ["at any time"],
   "packageRules": [
+    {
+      "matchDataSource": "github-tags",
+      "addLabels": ["dev dependencies"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    },
+    {
+      "matchDataSource": "gradle-version",
+      "addLabels": ["dev dependencies"],
+      "automerge": true,
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "matchDataSource": "gradle-version",
+      "addLabels": ["dev dependencies"],
+      "automerge": false,
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
     {
       "matchCurrentVersion": "<1.0.0",
       "automerge": false,
