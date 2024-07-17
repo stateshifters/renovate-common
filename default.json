@@ -35,6 +35,10 @@
   "schedule": ["at any time"],
   "packageRules": [
     {
+      "matchManagers": ["gradle"],
+      "automerge": false
+    },
+    {
       "matchDataSource": "github-tags",
       "addLabels": ["dev dependencies"],
       "automerge": true,
