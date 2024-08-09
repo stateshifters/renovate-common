@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": [
+    "main"
+  ],
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
     "dockerfile",
@@ -29,16 +32,7 @@
     "github>stateshifters/renovate-common:webpack",
     "customManagers:biomeVersions"
   ],
-  "baseBranches": [
-    "main"
-  ],
-  "semanticCommits": "enabled",
-  "semanticCommitType": "chore",
-  "rangeStrategy": "pin",
-  "platformAutomerge": true,
   "minimumReleaseAge": "7d",
-  "prHourlyLimit": 0,
-  "schedule": ["at any time"],
   "packageRules": [
     {
       "matchManagers": ["gradle"],
@@ -128,5 +122,11 @@
       "semanticCommitType": "fix",
       "prPriority": 6
     }
-  ]
+  ],
+  "platformAutomerge": true,
+  "prHourlyLimit": 0,
+  "rangeStrategy": "pin",
+  "schedule": ["at any time"],
+  "semanticCommitType": "chore",
+  "semanticCommits": "enabled"
 }
