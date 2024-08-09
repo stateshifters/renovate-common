@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default configuration for Docker related tools",
+  "docker-compose": {
+    "automerge": false
+  },
+  "docker": {
+    "automerge": false,
+    "pinDigests": true
+  }
+}

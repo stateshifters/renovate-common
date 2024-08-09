@@ -2,14 +2,19 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
+    "dockerfile",
+    "docker-compose",
     "github-actions",
-    "gradle-wrapper"
+    "gomod",
+    "gradle-wrapper",
+    "npm"
   ],
   "extends": [
     "config:base",
     "github>stateshifters/renovate-common:aws",
     "github>stateshifters/renovate-common:common-tooling",
     "github>stateshifters/renovate-common:conform",
+    "github>stateshifters/renovate-common:docker",
     "github>stateshifters/renovate-common:esbuild",
     "github>stateshifters/renovate-common:eslint",
     "github>stateshifters/renovate-common:engines",
@@ -21,7 +26,8 @@
     "github>stateshifters/renovate-common:stylelint",
     "github>stateshifters/renovate-common:testing",
     "github>stateshifters/renovate-common:vite",
-    "github>stateshifters/renovate-common:webpack"
+    "github>stateshifters/renovate-common:webpack",
+    "customManagers:biomeVersions"
   ],
   "baseBranches": [
     "main"
