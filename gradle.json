@@ -14,8 +14,7 @@
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ],
-      "groupName": "gradle dependencies"
+      ]
     },
     {
       "matchDataSource": "gradle-version",
@@ -24,8 +23,7 @@
       "semanticCommitType": "chore",
       "matchUpdateTypes": [
         "major"
-      ],
-      "groupName": "gradle dependencies"
+      ]
     }
   ]
 }
