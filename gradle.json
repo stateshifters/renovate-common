@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchManagers": ["gradle"],
+      "automerge": false,
+      "groupName": "gradle dependencies"
+    },
+    {
+      "matchDataSource": "gradle-version",
+      "addLabels": ["dev dependencies"],
+      "automerge": true,
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "gradle dependencies"
+    },
+    {
+      "matchDataSource": "gradle-version",
+      "addLabels": ["dev dependencies"],
+      "automerge": false,
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "gradle dependencies"
+    }
+  ]
+}

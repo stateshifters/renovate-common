@@ -3,12 +3,16 @@
   "baseBranches": [
     "main"
   ],
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardTitle": "Dependencies needing attention",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
     "dockerfile",
     "docker-compose",
     "github-actions",
     "gomod",
+    "gradle",
     "gradle-wrapper",
     "npm"
   ],
@@ -21,6 +25,7 @@
     "github>stateshifters/renovate-common:esbuild",
     "github>stateshifters/renovate-common:eslint",
     "github>stateshifters/renovate-common:engines",
+    "github>stateshifters/renovate-common:gradle",
     "github>stateshifters/renovate-common:i18next",
     "github>stateshifters/renovate-common:postcss",
     "github>stateshifters/renovate-common:posthog",
@@ -30,38 +35,18 @@
     "github>stateshifters/renovate-common:testing",
     "github>stateshifters/renovate-common:vite",
     "github>stateshifters/renovate-common:webpack",
-    "customManagers:biomeVersions"
+    "customManagers:biomeVersions",
+    "customManagers:dockerfileVersions",
+    ":rebaseStalePrs",
+    ":maintainLockFilesWeekly"
   ],
   "minimumReleaseAge": "7d",
   "packageRules": [
-    {
-      "matchManagers": ["gradle"],
-      "automerge": false
-    },
     {
       "matchDataSource": "github-tags",
       "addLabels": ["dev dependencies"],
       "automerge": true,
       "semanticCommitType": "ci"
-    },
-    {
-      "matchDataSource": "gradle-version",
-      "addLabels": ["dev dependencies"],
-      "automerge": true,
-      "semanticCommitType": "chore",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
-    },
-    {
-      "matchDataSource": "gradle-version",
-      "addLabels": ["dev dependencies"],
-      "automerge": false,
-      "semanticCommitType": "chore",
-      "matchUpdateTypes": [
-        "major"
-      ]
     },
     {
       "matchCurrentVersion": "<1.0.0",
@@ -124,6 +109,12 @@
     }
   ],
   "platformAutomerge": true,
+  "postUpdateOptions": [
+    "npmDedupe",
+    "pnpmDedupe",
+    "yarnDedupeHighest",
+    "yarnDedupeFewer"
+  ],
   "prHourlyLimit": 0,
   "rangeStrategy": "pin",
   "schedule": ["at any time"],

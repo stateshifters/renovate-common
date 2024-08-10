@@ -3,9 +3,7 @@ module.exports = {
   onboardingConfig: {
     $schema: "https://docs.renovatebot.com/renovate-schema.json",
     extends: [
-      "github>stateshifters/renovate-common",
-      "customManagers:biomeVersions",
-      "customManagers:dockerfileVersions"
+      "github>stateshifters/renovate-common"
     ],
     prConcurrentLimit: 1,
     description: "Default Preset for Renovate. Adjust the settings below to configure Renovate for this project.",
