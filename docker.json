@@ -7,5 +7,19 @@
   "docker": {
     "automerge": false,
     "pinDigests": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "automerge": true,
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": [
+        "pinDigest",
+        "digest",
+        "pin"
+      ]
+    }
+  ]
 }
