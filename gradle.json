@@ -7,7 +7,7 @@
       "groupName": "gradle dependencies"
     },
     {
-      "matchDataSource": "gradle-version",
+      "matchDatasources": [ "gradle-version" ],
       "addLabels": ["dev dependencies"],
       "automerge": true,
       "semanticCommitType": "chore",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "matchDataSource": "gradle-version",
+      "matchDatasources": [ "gradle-version" ],
       "addLabels": ["dev dependencies"],
       "automerge": false,
       "semanticCommitType": "chore",
