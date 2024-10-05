@@ -2,11 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "matchPackageNames": [
+        "*i18next*"
+      ],
       "matchPackagePrefixes": [
         "i18next"
-      ],
-      "matchPackagePatterns": [
-        ".*i18next.*"
       ],
       "automerge": true,
       "groupName": "i18next dependencies"
