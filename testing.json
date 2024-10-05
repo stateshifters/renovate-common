@@ -10,31 +10,26 @@
       "groupName": "testing library dependencies"
     },
     {
-      "matchPackagePrefixes": [
-        "@vitejs/",
-        "vite-"
-      ],
-      "matchPackagePatterns": [
-        ".*vitest.*"
-      ],
       "matchPackageNames": [
-        "@vitest/coverage-c8",
-        "c8",
-        "vite"
+        "vite{/,}**",
+        "@vitejs{/,}**",
+        "*vitest{/,}**",
+        "@vitest{/,}**",
+        "c8"
       ],
       "automerge": true,
       "groupName": "vitest dependencies"
     },
     {
-      "matchPackagePatterns": [
-        ".*jest.*"
+      "matchPackageNames": [
+        "*jest{/,}**"
       ],
       "automerge": true,
       "groupName": "jest dependencies"
     },
     {
-      "matchPackagePatterns": [
-        ".*jsdom.*"
+      "matchPackageNames": [
+        "*jsdom{/,}**"
       ],
       "automerge": true,
       "groupName": "jsdom dependencies"

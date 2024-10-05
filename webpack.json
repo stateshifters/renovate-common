@@ -2,8 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        ".*webpack.*"
+      "matchPackageNames": [
+        "*webpack{/,}**"
       ],
       "automerge": true,
       "groupName": "webpack dependencies"

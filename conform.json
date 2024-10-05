@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@conform"],
+      "matchPackageNames": ["@conform{/,}**"],
       "groupName": "conform packages",
       "automerge": true
     }

@@ -2,11 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchPackagePrefixes": [
-        "eslint"
-      ],
-      "matchPackagePatterns": [
-        ".*eslint.*"
+      "matchPackageNames": [
+        "*eslint*",
+        "*eslint{/,}**"
       ],
       "automerge": true,
       "groupName": "eslint dependencies"

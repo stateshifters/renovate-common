@@ -6,8 +6,8 @@
         "minor",
         "patch"
       ],
-      "matchPackagePatterns": [
-        ".*remix.*"
+      "matchPackageNames": [
+        "*remix{/,}**"
       ],
       "automerge": true,
       "semanticCommitType": "fix",
@@ -18,8 +18,8 @@
         "major"
       ],
       "prPriority": -100,
-      "matchPackagePatterns": [
-        ".*remix.*"
+      "matchPackageNames": [
+        "*remix{/,}**"
       ],
       "automerge": true,
       "semanticCommitType": "fix",

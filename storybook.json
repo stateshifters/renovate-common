@@ -3,10 +3,10 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "*stylelint{/,}**"
+        "*storybook{/,}**"
       ],
       "automerge": true,
-      "groupName": "stylelint dependencies"
+      "groupName": "storybook dependencies"
     }
   ]
 }

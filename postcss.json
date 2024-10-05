@@ -4,10 +4,11 @@
     {
       "automerge": true,
       "groupName": "postcss dependencies",
-      "matchPackagePatterns": [
-        ".*postcss.*",
-        ".*autoprefixer.*",
-        ".*cssnano.*"
+      "matchPackageNames": [
+        "*postcss*",
+        "*postcss{/,}**",
+        "*autoprefixer{/,}**",
+        "*cssnano{/,}**"
       ],
       "addLabels": [
         "runtime dependencies"
