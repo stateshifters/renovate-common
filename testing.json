@@ -13,7 +13,7 @@
       "matchPackageNames": [
         "vite{/,}**",
         "@vitejs{/,}**",
-        "*vitest{/,}**",
+        "vitest{/,}**",
         "@vitest{/,}**",
         "c8"
       ],
@@ -22,14 +22,14 @@
     },
     {
       "matchPackageNames": [
-        "*jest{/,}**"
+        "jest{/,}**"
       ],
       "automerge": true,
       "groupName": "jest dependencies"
     },
     {
       "matchPackageNames": [
-        "*jsdom{/,}**"
+        "jsdom{/,}**"
       ],
       "automerge": true,
       "groupName": "jsdom dependencies"

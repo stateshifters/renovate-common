@@ -3,8 +3,8 @@
   "packageRules": [
     {
       "matchPackagePrefixes": [
-        "@vitejs/",
-        "vite-"
+        "@vitejs",
+        "vite"
       ],
       "matchPackageNames": [
         "vite"

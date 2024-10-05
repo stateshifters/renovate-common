@@ -3,10 +3,10 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "react",
-        "react-dom",
-        "@types/react",
-        "@types/react-dom"
+        "react{/,}**",
+        "react-dom{/,}**",
+        "@types/react{/,}**",
+        "@types/react-dom{/,}**"
       ],
       "automerge": true,
       "semanticCommitType": "fix",
@@ -14,10 +14,10 @@
     },
     {
       "matchPackageNames": [
-        "react-email"
+        "react-email{/,}**"
       ],
       "matchPackagePrefixes": [
-        "@react-email/"
+        "@react-email"
       ],
       "automerge": true,
       "groupName": "react email dependencies"

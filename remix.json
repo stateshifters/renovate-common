@@ -7,7 +7,7 @@
         "patch"
       ],
       "matchPackageNames": [
-        "*remix{/,}**"
+        "remix{/,}**"
       ],
       "automerge": true,
       "semanticCommitType": "fix",
@@ -19,7 +19,7 @@
       ],
       "prPriority": -100,
       "matchPackageNames": [
-        "*remix{/,}**"
+        "remix{/,}**"
       ],
       "automerge": true,
       "semanticCommitType": "fix",
