@@ -38,8 +38,7 @@
     "github>stateshifters/renovate-common:webpack",
     "customManagers:biomeVersions",
     "customManagers:dockerfileVersions",
-    ":rebaseStalePrs",
-    ":maintainLockFilesWeekly"
+    ":rebaseStalePrs"
   ],
   "minimumReleaseAge": "7d",
   "packageRules": [
@@ -120,5 +119,16 @@
   "rangeStrategy": "pin",
   "schedule": ["at any time"],
   "semanticCommitType": "chore",
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "lockFileMaintenance": {
+    "enabled": false,
+    "recreateWhen": "always",
+    "rebaseStalePrs": true,
+    "branchTopic": "lock-file-maintenance",
+    "commitMessageAction": "Lock file maintenance",
+    "commitMessagePrefix": "chore",
+    "schedule": ["before 4am on monday"],
+    "groupName": null,
+    "prBodyDefinitions": {"Change": "All locks refreshed"}
+  }
 }
