@@ -43,12 +43,6 @@
   "minimumReleaseAge": "7d",
   "packageRules": [
     {
-      "matchDataSource": "github-tags",
-      "addLabels": ["dev dependencies"],
-      "automerge": true,
-      "semanticCommitType": "ci"
-    },
-    {
       "matchCurrentVersion": "<1.0.0",
       "automerge": false,
       "description": "Do not automerge releases that are less than 1.0.0. They are highly likely to be breaking changes."

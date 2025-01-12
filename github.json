@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "action"
+      ],
+      "pinDigests": true,
+      "semanticCommitType": "ci",
+      "groupName": "github actions",
+      "automerge": true
+    },
+    {
+      "matchDataSource": "github-tags",
+      "addLabels": ["dev dependencies"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    }
+  ]
+}
