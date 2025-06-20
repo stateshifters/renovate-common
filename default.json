@@ -26,6 +26,7 @@
     "github>stateshifters/renovate-common:eslint",
     "github>stateshifters/renovate-common:engines",
     "github>stateshifters/renovate-common:gradle",
+    "github>stateshifters/renovate-common:golang",
     "github>stateshifters/renovate-common:i18next",
     "github>stateshifters/renovate-common:postcss",
     "github>stateshifters/renovate-common:posthog",
