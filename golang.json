@@ -9,6 +9,13 @@
       ],
       "enabled": true,
       "automerge": true
+    },
+    {
+      "matchManagers": [
+        "gomod"
+      ],
+      "enabled": true,
+      "automerge": true
     }
   ]
 }
