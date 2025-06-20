@@ -18,7 +18,7 @@
   ],
   "extends": [
     "config:base",
-    "github>stateshifters/basics",
+    "github>stateshifters/renovate-common:basics",
     "github>stateshifters/renovate-common:aws",
     "github>stateshifters/renovate-common:common-tooling",
     "github>stateshifters/renovate-common:conform",
