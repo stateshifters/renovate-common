@@ -2,6 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "matchCurrentVersion": "<1.0.0",
+      "description": "Golang's ecosystem is still evolving, so we want to ensure that we are always using the latest version of the dependencies.",
       "matchManagers": [
         "gomod"
       ],
