@@ -1,0 +1,65 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchCurrentVersion": "<1.0.0",
+      "automerge": false,
+      "addLabels": ["v0 releases"],
+      "description": "Do not automerge releases that are less than 1.0.0. They are highly likely to be breaking changes."
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "addLabels": ["dev dependencies"],
+      "prPriority": 10
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "addLabels": ["runtime dependencies"],
+      "prPriority": 5
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": true,
+      "semanticCommitType": "chore",
+      "prPriority": 15
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "semanticCommitType": "fix",
+      "prPriority": 6
+    }
+  ]
+}
