@@ -21,6 +21,18 @@
         "tsx",
         "wait-on"
       ]
+    },
+    {
+      "description": "Auto migrate biome config",
+      "matchPackageNames": [
+        "@biomejs/biome"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "npx biome migrate"
+        ]
+      }
+
     }
   ]
 }
