@@ -3,8 +3,7 @@
   "packageRules": [
     {
       "matchManagers": ["gradle"],
-      "automerge": false,
-      "groupName": "gradle dependencies"
+      "automerge": true
     },
     {
       "matchDatasources": [ "gradle-version" ],
