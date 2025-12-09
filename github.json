@@ -6,7 +6,12 @@
       "pinDigests": true,
       "semanticCommitType": "ci",
       "groupName": "github actions",
-      "automerge": true
+      "automerge": true,
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ]
     },
     {
       "matchDataSource": "github-tags",
