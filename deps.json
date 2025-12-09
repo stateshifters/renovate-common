@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>stateshifters/renovate-common"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "semanticCommitType": "deps"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "semanticCommitType": "deps",
+      "prPriority": 6
+    },
+    {
+      "matchPackageNames": [
+        "react{/,}**",
+        "react-dom{/,}**",
+        "@types/react{/,}**",
+        "@types/react-dom{/,}**"
+      ],
+      "automerge": true,
+      "semanticCommitType": "deps",
+      "groupName": "react monorepo"
+    }
+  ]
+}
