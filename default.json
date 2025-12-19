@@ -52,7 +52,7 @@
   ],
   "prHourlyLimit": 0,
   "rangeStrategy": "pin",
-  "rebaseWhen": "auto",
+  "rebaseWhen": "behind-base-branch",
   "schedule": ["at any time"],
   "semanticCommitType": "chore",
   "semanticCommits": "enabled",
