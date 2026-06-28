@@ -34,6 +34,7 @@
     "github>stateshifters/renovate-common:posthog",
     "github>stateshifters/renovate-common:react",
     "github>stateshifters/renovate-common:remix",
+    "github>stateshifters/renovate-common:rust",
     "github>stateshifters/renovate-common:storybook",
     "github>stateshifters/renovate-common:stylelint",
     "github>stateshifters/renovate-common:testing",
