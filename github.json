@@ -3,15 +3,11 @@
   "packageRules": [
     {
       "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
       "pinDigests": true,
       "semanticCommitType": "ci",
       "groupName": "github actions",
-      "automerge": true,
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ]
+      "automerge": true
     },
     {
       "matchDataSource": "github-tags",
