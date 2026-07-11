@@ -32,6 +32,7 @@
     "github>stateshifters/renovate-common:i18next",
     "github>stateshifters/renovate-common:postcss",
     "github>stateshifters/renovate-common:posthog",
+    "github>stateshifters/renovate-common:python",
     "github>stateshifters/renovate-common:react",
     "github>stateshifters/renovate-common:remix",
     "github>stateshifters/renovate-common:rust",

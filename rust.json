@@ -1,9 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "packageRules": [
-        {
-          "matchManagers": ["cargo"],
-          "enabled": true
-        }
-    ]
+  "packageRules": [
+    {
+      "matchManagers": [
+        "cargo"
+      ],
+      "enabled": true
+    }
+  ],
+  "enabledManagers": [
+    "cargo"
+  ]
 }
