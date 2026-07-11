@@ -55,7 +55,9 @@
   "prHourlyLimit": 0,
   "rangeStrategy": "pin",
   "rebaseWhen": "behind-base-branch",
-  "schedule": ["at any time"],
+  "schedule": [
+    "at any time"
+  ],
   "semanticCommitType": "chore",
   "semanticCommits": "enabled",
   "lockFileMaintenance": {
@@ -65,8 +67,24 @@
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
     "commitMessagePrefix": "chore",
-    "schedule": ["before 4am on monday"],
+    "schedule": [
+      "before 4am on monday"
+    ],
     "groupName": null,
-    "prBodyDefinitions": {"Change": "All locks refreshed"}
-  }
+    "prBodyDefinitions": {
+      "Change": "All locks refreshed"
+    }
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "pin",
+        "pinDigest"
+      ],
+      "minimumReleaseAge": null,
+      "automerge": true,
+      "commitMessageAction": "pinned dependencies",
+      "commitMessagePrefix": "chore"
+    }
+  ]
 }
