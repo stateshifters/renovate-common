@@ -24,6 +24,7 @@
       "matchManagers": [
         "gomod"
       ],
+      "constraintsFiltering": "strict",
       "enabled": true,
       "automerge": true
     },
