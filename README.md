@@ -1,13 +1,12 @@
 # Renovate Configuration
 
-## Special Docker Versioning
+## Special Versioning Annotations
 
-Renovate doesn't know how to handle tool versioning that lives within dockerfiles.
-To combat that, we've got a special configuration that will look for the tool version in the dockerfile and update it accordingly.
+We're using all of [Renovate's special versioning annotations](https://docs.renovatebot.com/presets-customManagers/).
 
-You can find it in the [docker](./docker.json) configuration.
+It requires you to add a comment above the version argument in files, so that Renovate can use to identify the tool and its version.
 
-It requires you to add a comment above the version argument in the dockerfile that Renovate can use to identify the tool and its version.
+For example, this is how we specify the version of `semgrep` and `osv-scanner` in our Dockerfile:
 
 ```dockerfile
 # renovate: datasource=pypi depName=semgrep

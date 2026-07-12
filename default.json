@@ -41,9 +41,8 @@
     "github>stateshifters/renovate-common:testing",
     "github>stateshifters/renovate-common:vite",
     "github>stateshifters/renovate-common:webpack",
-    "customManagers:biomeVersions",
-    "customManagers:dockerfileVersions",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    "mergeConfidence:all-badges"
   ],
   "minimumReleaseAge": "7d",
   "platformAutomerge": true,
@@ -64,14 +63,14 @@
   "semanticCommitType": "chore",
   "semanticCommits": "enabled",
   "lockFileMaintenance": {
-    "enabled": false,
-    "recreateWhen": "always",
+    "enabled": true,
+    "recreateWhen": "auto",
     "rebaseStalePrs": true,
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
     "commitMessagePrefix": "chore",
-    "schedule": [
-      "before 4am on monday"
+    "extends": [
+      "schedule:earlyMondays"
     ],
     "groupName": null,
     "prBodyDefinitions": {

@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default configuration for Docker related tools",
+  "extends": [
+    "customManagers:dockerfileVersions"
+  ],
   "docker-compose": {
     "automerge": false
   },
@@ -19,17 +22,6 @@
         "pinDigest",
         "digest",
         "pin"
-      ]
-    }
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "(^|/)Dockerfile$",
-        "(^|/)Dockerfile\\.[^/]*$"
-      ],
-      "matchStrings": [
-        "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=(?<currentValue>.*)\\s"
       ]
     }
   ]

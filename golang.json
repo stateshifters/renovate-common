@@ -4,6 +4,12 @@
     "gomodTidy",
     "gomodUpdateImportPaths"
   ],
+  "extends": [
+    "customManagers:makefileVersions"
+  ],
+  "gomod": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchCurrentVersion": "<1.0.0",
