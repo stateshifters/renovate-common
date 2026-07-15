@@ -5,6 +5,7 @@
   ],
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "unresolved",
   "dependencyDashboardTitle": "Dependencies needing attention",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
@@ -46,6 +47,7 @@
     "mergeConfidence:all-badges"
   ],
   "minimumReleaseAge": "7d",
+  "osvVulnerabilityAlerts": true,
   "platformAutomerge": true,
   "postUpdateOptions": [
     "npmDedupe",
