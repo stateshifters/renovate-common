@@ -1,0 +1,7 @@
+pre-commit:
+  commands:
+    validate-renovate-config:
+      glob: "*.json"
+      exclude:
+        - package.json
+      run: pnpm exec renovate-config-validator --strict {staged_files}

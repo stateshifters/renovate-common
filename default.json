@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": [
+  "baseBranchPatterns": [
     "main"
   ],
   "dependencyDashboard": true,
@@ -18,7 +18,7 @@
     "npm"
   ],
   "extends": [
-    "config:base",
+    "config:recommended",
     "github>stateshifters/renovate-common:basics",
     "github>stateshifters/renovate-common:aws",
     "github>stateshifters/renovate-common:biome",
@@ -70,7 +70,7 @@
   "lockFileMaintenance": {
     "enabled": true,
     "recreateWhen": "auto",
-    "rebaseStalePrs": true,
+    "rebaseWhen": "behind-base-branch",
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
     "commitMessagePrefix": "chore",

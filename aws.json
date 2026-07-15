@@ -6,23 +6,19 @@
       "matchPackageNames": [
         "aws-cdk",
         "aws-cdk-lib",
-        "constructs"
+        "constructs",
+        "@aws-cdk/{/,}**",
+        "aws-cdk-{/,}**"
       ],
       "addLabels": [
         "runtime dependencies"
-      ],
-      "matchPackagePrefixes": [
-        "@aws-cdk/",
-        "aws-cdk-"
       ],
       "automerge": true,
       "groupName": "cdk dependencies"
     },
     {
       "matchPackageNames": [
-      ],
-      "matchPackagePrefixes": [
-        "@aws-sdk/"
+        "@aws-sdk/{/,}**"
       ],
       "automerge": true,
       "groupName": "aws sdk dependencies"

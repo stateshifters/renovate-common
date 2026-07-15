@@ -8,10 +8,6 @@
     {
       "automerge": true,
       "groupName": "local developer dependencies",
-      "matchPackagePrefixes": [
-        "@commitlint",
-        "@jscpd"
-      ],
       "matchPackageNames": [
         "@evilmartians/lefthook",
         "@npmcli/package-json",
@@ -22,7 +18,9 @@
         "rimraf",
         "ts-node",
         "tsx",
-        "wait-on"
+        "wait-on",
+        "@commitlint{/,}**",
+        "@jscpd{/,}**"
       ]
     }
   ]

@@ -7,11 +7,14 @@
   "docker-compose": {
     "automerge": false
   },
-  "docker": {
-    "automerge": false,
-    "pinDigests": true
-  },
   "packageRules": [
+    {
+      "matchCategories": [
+        "docker"
+      ],
+      "automerge": false,
+      "pinDigests": true
+    },
     {
       "matchDatasources": [
         "docker"

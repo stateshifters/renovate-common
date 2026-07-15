@@ -1,3 +1,4 @@
 # No IDE specific files should ever make it into the repo
 .idea
 .vscode
+node_modules

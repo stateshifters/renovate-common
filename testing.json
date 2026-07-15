@@ -2,12 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchPackagePrefixes": [
-        "@testing-library",
-        "@types/testing-library"
-      ],
       "automerge": true,
-      "groupName": "testing library dependencies"
+      "groupName": "testing library dependencies",
+      "matchPackageNames": [
+        "@testing-library{/,}**",
+        "@types/testing-library{/,}**"
+      ]
     },
     {
       "matchPackageNames": [

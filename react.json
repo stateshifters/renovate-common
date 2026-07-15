@@ -14,10 +14,8 @@
     },
     {
       "matchPackageNames": [
-        "react-email{/,}**"
-      ],
-      "matchPackagePrefixes": [
-        "@react-email"
+        "react-email{/,}**",
+        "@react-email{/,}**"
       ],
       "automerge": true,
       "groupName": "react email dependencies"

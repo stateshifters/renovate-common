@@ -2,12 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchPackagePrefixes": [
-        "@vitejs",
-        "vite"
-      ],
       "matchPackageNames": [
-        "vite"
+        "vite",
+        "@vitejs{/,}**",
+        "vite{/,}**"
       ],
       "automerge": true,
       "groupName": "vite dependencies"

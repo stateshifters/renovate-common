@@ -3,10 +3,8 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "*i18next*"
-      ],
-      "matchPackagePrefixes": [
-        "i18next"
+        "*i18next*",
+        "i18next{/,}**"
       ],
       "automerge": true,
       "groupName": "i18next dependencies"
