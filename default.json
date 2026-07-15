@@ -20,6 +20,7 @@
     "config:base",
     "github>stateshifters/renovate-common:basics",
     "github>stateshifters/renovate-common:aws",
+    "github>stateshifters/renovate-common:biome",
     "github>stateshifters/renovate-common:common-tooling",
     "github>stateshifters/renovate-common:conform",
     "github>stateshifters/renovate-common:docker",
