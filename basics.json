@@ -11,7 +11,7 @@
   },
   "packageRules": [
     {
-      "abandonmentThreshold": "3 years",
+      "abandonmentThreshold": "1 year",
       "matchPackageNames": [
         "*"
       ]
