@@ -47,6 +47,8 @@
     "mergeConfidence:all-badges"
   ],
   "minimumReleaseAge": "7d",
+  "minimumReleaseAgeBehaviour": "timestamp-required",
+  "internalChecksFilter": "strict",
   "osvVulnerabilityAlerts": true,
   "platformAutomerge": true,
   "postUpdateOptions": [
