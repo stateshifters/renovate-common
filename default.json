@@ -50,6 +50,10 @@
   "minimumReleaseAgeBehaviour": "timestamp-required",
   "internalChecksFilter": "strict",
   "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "groupName": "vulnerability updates",
+    "semanticCommitType": "fix"
+  },
   "platformAutomerge": true,
   "postUpdateOptions": [
     "npmDedupe",
