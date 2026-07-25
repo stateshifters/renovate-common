@@ -9,5 +9,8 @@
     "lefthook": "2.1.10",
     "renovate": "43.264.2"
   },
-  "packageManager": "pnpm@11.10.0"
+  "packageManager": "pnpm@11.10.0",
+  "engines": {
+    "node": "24"
+  }
 }

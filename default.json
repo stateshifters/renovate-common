@@ -81,6 +81,7 @@
     "extends": [
       "schedule:earlyMondays"
     ],
+    "minimumReleaseAgeBehaviour": "timestamp-optional",
     "groupName": null,
     "prBodyDefinitions": {
       "Change": "All locks refreshed"
