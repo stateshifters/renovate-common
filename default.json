@@ -46,6 +46,7 @@
     ":rebaseStalePrs",
     "mergeConfidence:all-badges"
   ],
+  "reviewersFromCodeOwners": false,
   "minimumReleaseAge": "7d",
   "minimumReleaseAgeBehaviour": "timestamp-required",
   "internalChecksFilter": "strict",
