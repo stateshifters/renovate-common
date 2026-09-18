@@ -55,7 +55,9 @@
     "groupName": "vulnerability updates",
     "semanticCommitType": "fix"
   },
-  "platformAutomerge": true,
+  "platformAutomerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
   "postUpdateOptions": [
     "npmDedupe",
     "pnpmDedupe",
