@@ -7,6 +7,18 @@
       ],
       "automerge": true,
       "rangeStrategy": "widen"
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "packageManager",
+        "devEngines.packageManager"
+      ],
+      "groupName": "{{{depName}}} package manager",
+      "rangeStrategy": "pin",
+      "separateMajorMinor": false
     }
   ]
 }
