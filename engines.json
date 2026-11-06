@@ -18,7 +18,7 @@
       ],
       "groupName": "{{{depName}}} package manager",
       "rangeStrategy": "pin",
-      "separateMajorMinor": false
+      "separateMajorMinor": true
     }
   ]
 }

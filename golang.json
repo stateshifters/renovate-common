@@ -12,6 +12,12 @@
   },
   "packageRules": [
     {
+      "description": "Preserve the Go minimum compatibility version instead of pinning it",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["golang"],
+      "rangeStrategy": "auto"
+    },
+    {
       "matchCurrentVersion": "<1.0.0",
       "description": "Golang's ecosystem is still evolving, so we want to ensure that we are always using the latest version of the dependencies.",
       "matchManagers": [

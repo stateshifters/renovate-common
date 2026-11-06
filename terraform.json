@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Terraform provider, module, lock file, runtime, and TFLint plugin updates",
+  "extends": ["customManagers:tfvarsVersions"],
+  "terraform": {
+    "rangeStrategy": "update-lockfile"
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["required_version"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "groupName": "Terraform providers"
+    },
+    {
+      "matchManagers": ["terraform", "terraform-version", "tflint-plugin"],
+      "automerge": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": [
+        "@langfuse/client",
+        "@langfuse/otel",
+        "@langfuse/tracing"
+      ],
+      "groupName": "langfuse dependencies"
+    }
+  ]
+}

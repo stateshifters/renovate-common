@@ -9,13 +9,19 @@
   "dependencyDashboardTitle": "Dependencies needing attention",
   "description": "Common renovate config for Stateshifter Labs Projects",
   "enabledManagers": [
+    "custom.jsonata",
+    "custom.regex",
     "dockerfile",
     "docker-compose",
     "github-actions",
     "gomod",
     "gradle",
     "gradle-wrapper",
-    "npm"
+    "npm",
+    "nvm",
+    "terraform",
+    "terraform-version",
+    "tflint-plugin"
   ],
   "extends": [
     "config:recommended",
@@ -32,6 +38,7 @@
     "github>stateshifters/renovate-common:gradle",
     "github>stateshifters/renovate-common:golang",
     "github>stateshifters/renovate-common:i18next",
+    "github>stateshifters/renovate-common:langfuse",
     "github>stateshifters/renovate-common:postcss",
     "github>stateshifters/renovate-common:posthog",
     "github>stateshifters/renovate-common:python",
@@ -41,6 +48,7 @@
     "github>stateshifters/renovate-common:storybook",
     "github>stateshifters/renovate-common:stylelint",
     "github>stateshifters/renovate-common:testing",
+    "github>stateshifters/renovate-common:terraform",
     "github>stateshifters/renovate-common:vite",
     "github>stateshifters/renovate-common:webpack",
     ":rebaseStalePrs",
@@ -58,17 +66,15 @@
   "platformAutomerge": false,
   "automergeType": "pr",
   "automergeStrategy": "squash",
-  "postUpdateOptions": [
-    "npmDedupe",
-    "pnpmDedupe",
-    "yarnDedupeHighest",
-    "yarnDedupeFewer"
-  ],
   "commitHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "rangeStrategy": "pin",
-  "rebaseWhen": "behind-base-branch",
+  "separateMajorMinor": true,
+  "rebaseWhen": "auto",
+  "pin": {
+    "rebaseWhen": "auto"
+  },
   "schedule": [
     "at any time"
   ],
@@ -77,10 +83,10 @@
   "lockFileMaintenance": {
     "enabled": true,
     "recreateWhen": "auto",
-    "rebaseWhen": "behind-base-branch",
+    "rebaseWhen": "auto",
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
-    "commitMessagePrefix": "chore",
+    "semanticCommitType": "chore",
     "extends": [
       "schedule:earlyMondays"
     ],
@@ -96,10 +102,38 @@
         "pin",
         "pinDigest"
       ],
+      "matchDatasources": ["!pypi"],
       "minimumReleaseAge": null,
       "automerge": true,
-      "commitMessageAction": "pinned dependencies",
-      "commitMessagePrefix": "chore"
+      "commitMessageAction": "pin",
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "description": "Require manual merging for Terraform and TFLint, including pins",
+      "matchManagers": ["terraform", "terraform-version", "tflint-plugin"],
+      "automerge": false
+    },
+    {
+      "description": "Require manual merging for Terraform images and Terraform-related actions",
+      "matchPackageNames": [
+        "hashicorp/terraform",
+        "docker.io/hashicorp/terraform",
+        "index.docker.io/hashicorp/terraform",
+        "registry-1.docker.io/hashicorp/terraform",
+        "hashicorp/setup-terraform",
+        "terraform-linters/**"
+      ],
+      "automerge": false
+    },
+    {
+      "description": "Allow Debian packages and container images without release timestamps",
+      "matchDatasources": ["deb", "docker"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
     }
   ]
 }

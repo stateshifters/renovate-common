@@ -5,5 +5,11 @@
     "pip_requirements",
     "poetry",
     "pipenv"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["pypi"],
+      "automerge": false
+    }
   ]
 }
