@@ -4,7 +4,8 @@
     {
       "groupName": "posthog dependencies",
       "matchPackageNames": [
-        "posthog{/,}**"
+        "posthog{/,}**",
+        "@posthog/**"
       ]
     }
   ]

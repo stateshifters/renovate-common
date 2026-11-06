@@ -12,7 +12,7 @@
       "matchPackageNames": [
         "jest{/,}**"
       ],
-      "groupName": "jest dependencies"
+      "groupName": "jest monorepo"
     },
     {
       "matchPackageNames": [
