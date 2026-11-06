@@ -9,7 +9,7 @@
         "vite-plugin-solid"
       ],
       "automerge": true,
-      "semanticCommitType": "fix",
+      "semanticCommitType": "chore",
       "groupName": "solidjs dependencies"
     }
   ]

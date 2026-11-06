@@ -50,7 +50,7 @@
       "matchUpdateTypes": [
         "major"
       ],
-      "automerge": true,
+      "automerge": false,
       "semanticCommitType": "chore",
       "prPriority": 15
     },
@@ -63,7 +63,7 @@
         "patch"
       ],
       "automerge": true,
-      "semanticCommitType": "fix"
+      "semanticCommitType": "chore"
     },
     {
       "matchDepTypes": [
@@ -73,7 +73,7 @@
         "major"
       ],
       "automerge": false,
-      "semanticCommitType": "fix",
+      "semanticCommitType": "chore",
       "prPriority": 6
     }
   ]

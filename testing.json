@@ -11,17 +11,6 @@
     },
     {
       "matchPackageNames": [
-        "vite{/,}**",
-        "@vitejs{/,}**",
-        "vitest{/,}**",
-        "@vitest{/,}**",
-        "c8"
-      ],
-      "automerge": true,
-      "groupName": "vitest dependencies"
-    },
-    {
-      "matchPackageNames": [
         "jest{/,}**"
       ],
       "automerge": true,

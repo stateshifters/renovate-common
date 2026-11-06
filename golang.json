@@ -4,9 +4,6 @@
     "gomodTidy",
     "gomodUpdateImportPaths"
   ],
-  "extends": [
-    "customManagers:makefileVersions"
-  ],
   "gomod": {
     "enabled": true
   },

@@ -9,7 +9,7 @@
         "@types/react-dom"
       ],
       "automerge": true,
-      "semanticCommitType": "fix",
+      "semanticCommitType": "chore",
       "groupName": "react monorepo"
     },
     {

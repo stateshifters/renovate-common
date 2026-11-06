@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prepare": "lefthook install"
+    "prepare": "lefthook install",
+    "test": "node --test"
   },
   "devDependencies": {
     "lefthook": "2.1.10",

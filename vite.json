@@ -5,7 +5,8 @@
       "matchPackageNames": [
         "vite",
         "@vitejs{/,}**",
-        "vite{/,}**"
+        "vitest",
+        "@vitest{/,}**"
       ],
       "automerge": true,
       "groupName": "vite dependencies"

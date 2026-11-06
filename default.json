@@ -11,6 +11,7 @@
   "enabledManagers": [
     "custom.jsonata",
     "custom.regex",
+    "cargo",
     "dockerfile",
     "docker-compose",
     "github-actions",
@@ -19,6 +20,9 @@
     "gradle-wrapper",
     "npm",
     "nvm",
+    "pip_requirements",
+    "pipenv",
+    "poetry",
     "terraform",
     "terraform-version",
     "tflint-plugin"
@@ -54,6 +58,17 @@
     "github>stateshifters/renovate-common:webpack",
     ":rebaseStalePrs",
     "mergeConfidence:all-badges"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/.*/"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+) depName=(?<depName>[^\\s]+)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+))?(?: versioning=(?<versioning>[^\\s]+))?(?: extractVersion=(?<extractVersion>[^\\s]+))?(?: registryUrl=(?<registryUrl>[^\\s]+))?\\r?\\n(?:export[ \\t]+)?[A-Za-z0-9_]+_VERSION[ \\t]*[:?]?=[ \\t]*(?<currentValue>[A-Za-z0-9][A-Za-z0-9._+:/-]*)[ \\t]*(?:\\r?\\n|$)",
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+) depName=(?<depName>[^\\s]+)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+))?(?: versioning=(?<versioning>[^\\s]+))?(?: extractVersion=(?<extractVersion>[^\\s]+))?(?: registryUrl=(?<registryUrl>[^\\s]+))?\\r?\\n(?:export[ \\t]+)?[A-Za-z0-9_]+_VERSION[ \\t]*[:?]?=[ \\t]*\\\"(?<currentValue>[A-Za-z0-9][A-Za-z0-9._+:/-]*)\\\"[ \\t]*(?:\\r?\\n|$)",
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+) depName=(?<depName>[^\\s]+)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+))?(?: versioning=(?<versioning>[^\\s]+))?(?: extractVersion=(?<extractVersion>[^\\s]+))?(?: registryUrl=(?<registryUrl>[^\\s]+))?\\r?\\n(?:export[ \\t]+)?[A-Za-z0-9_]+_VERSION[ \\t]*[:?]?=[ \\t]*'(?<currentValue>[A-Za-z0-9][A-Za-z0-9._+:/-]*)'[ \\t]*(?:\\r?\\n|$)"
+      ]
+    }
   ],
   "reviewersFromCodeOwners": false,
   "minimumReleaseAge": "7d",
@@ -135,6 +150,16 @@
       "description": "Allow Debian packages and container images without release timestamps",
       "matchDatasources": ["deb", "docker"],
       "minimumReleaseAgeBehaviour": "timestamp-optional"
+    },
+    {
+      "description": "Require manual merging for major updates, including grouped packages",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Require manual merging for dependencies still below 1.0.0",
+      "matchCurrentVersion": "<1.0.0",
+      "automerge": false
     }
   ]
 }

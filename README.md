@@ -17,6 +17,9 @@ Renovate loads [default.json](default.json) and targets `main`. Set
 `baseBranchPatterns` in your repository's configuration if you use another
 target branch. After Renovate runs, check its logs and the dependency dashboard
 for detected updates. Renovate closes the dashboard issue when it is empty.
+Eligible minor/patch updates and initial pins can automerge after required
+checks and repository merge rules pass.
+Major updates and updates from versions below `1.0.0` require manual merging.
 
 See [Renovate's shared preset guide](https://docs.renovatebot.com/config-presets/).
 
@@ -34,15 +37,31 @@ preset includes matchers for these declarations.
 
 ### Annotate tool versions
 
-For a tool installed by a script, declare its version in one of the supported
-files below. Reference the variable from the install command so the installed
-version follows Renovate's update. Use LF line endings and put the annotation
-immediately above the declaration.
+For a tool installed by a script, annotate its literal version assignment in
+any file Renovate scans, regardless of its extension. Reference the variable
+from the install command so the installed version follows Renovate's update.
+Put the annotation immediately above the declaration.
 `datasource` identifies the release source, and `depName` identifies the
 dependency within that source.
 
+Use a variable name ending in `_VERSION`. Plain assignments and `export`
+assignments accept an unquoted value or a value in single or double quotes.
+The assignment operators `=`, `:=`, and `?=` are supported. Use a literal
+version rather than a variable reference or command substitution. LF and CRLF
+line endings are supported for these assignments.
+
+```sh
+# renovate: datasource=github-releases depName=mikefarah/yq
+export YQ_VERSION="v4.53.6"
+```
+
+Optional annotation fields follow `depName` in this order: `packageName` (or
+`lookupName`), `versioning`, `extractVersion`, and `registryUrl`. Omit fields
+that are not needed.
+
 In a Dockerfile, use an unindented `ARG` or `ENV` with a literal value and a
-name ending in `_VERSION`. This example assumes the image has pip.
+name ending in `_VERSION`. Use LF line endings for Dockerfile annotations.
+This example assumes the image has pip.
 
 ```dockerfile
 # renovate: datasource=pypi depName=semgrep
@@ -123,8 +142,9 @@ pnpm_version = "11.10.0"
 
 Check the dependency dashboard and Renovate logs for the affected dependency.
 Confirm that Renovate can read the preset and is targeting the right branch.
-For annotations, check the filename, variable suffix, and line endings. Follow
-the field order shown in the examples.
+For annotations, check the declaration syntax, variable suffix, and line
+endings. Follow the field order shown in the examples. Renovate's file ignore
+rules still apply to annotated declarations.
 
 If you override `enabledManagers`, include `custom.regex` for annotation and
 TypeScript base config updates and `custom.jsonata` for Biome schema updates.
@@ -138,3 +158,33 @@ can keep an update pending indefinitely. Debian packages and container images
 can proceed without a timestamp, and the wait applies when one is available.
 The preset also waives the age check for pins outside PyPI. Renovate bypasses
 the wait for security updates. See [Renovate's release age checks](https://docs.renovatebot.com/key-concepts/minimum-release-age/).
+
+## Protect lockfile resolutions
+
+The release-age check on an update does not establish the age of every
+transitive dependency selected when a package manager regenerates a lockfile.
+Configure a cooldown in the consuming repository's package manager as well.
+Extending this preset does not copy this repository's package-manager settings.
+
+For pnpm 11, put the following in the consuming repository's
+`pnpm-workspace.yaml`. The age is in minutes; `10080` is seven days. These
+settings reject resolutions that have no eligible version or no publish
+timestamp instead of allowing a newer or undated version.
+
+```yaml
+minimumReleaseAge: 10080
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeStrict: true
+```
+
+See [pnpm's cooldown settings](https://pnpm.io/settings/dependency-resolution#minimumreleaseage).
+Renovate can add a version-specific pnpm cooldown exception for a vulnerability
+fix, allowing that fix to proceed without exempting future normal releases.
+
+With Renovate `43.264.2`, npm receives a `--before` cutoff during lockfile
+generation unless a `min-release-age` setting is already present in `.npmrc`.
+If locked packages cannot satisfy that cutoff, Renovate can retry without it
+and report a warning; review that warning before merging. The same Renovate
+version does not pass its cooldown to pnpm, Yarn, Poetry, Pipenv, Cargo, Gradle,
+or Terraform. Check each package manager's own support and configuration before
+relying on lockfile maintenance to enforce a transitive cooldown.

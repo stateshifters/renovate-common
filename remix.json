@@ -10,7 +10,7 @@
         "remix{/,}**"
       ],
       "automerge": true,
-      "semanticCommitType": "fix",
+      "semanticCommitType": "chore",
       "groupName": "remix dependencies"
     },
     {
@@ -22,7 +22,7 @@
         "remix{/,}**"
       ],
       "automerge": true,
-      "semanticCommitType": "fix",
+      "semanticCommitType": "chore",
       "groupName": "remix dependencies"
     }
   ]
