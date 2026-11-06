@@ -5,7 +5,6 @@
       "matchPackageNames": [
         "*webpack{/,}**"
       ],
-      "automerge": true,
       "groupName": "webpack dependencies"
     }
   ]

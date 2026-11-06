@@ -8,8 +8,6 @@
         "solid-start{/,}**",
         "vite-plugin-solid"
       ],
-      "automerge": true,
-      "semanticCommitType": "chore",
       "groupName": "solidjs dependencies"
     }
   ]

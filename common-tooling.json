@@ -6,7 +6,6 @@
   ],
   "packageRules": [
     {
-      "automerge": true,
       "groupName": "local developer dependencies",
       "matchPackageNames": [
         "@evilmartians/lefthook",

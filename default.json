@@ -29,6 +29,7 @@
   ],
   "extends": [
     "config:recommended",
+    ":semanticCommitTypeAll(chore)",
     "github>stateshifters/renovate-common:basics",
     "github>stateshifters/renovate-common:aws",
     "github>stateshifters/renovate-common:biome",
@@ -80,6 +81,7 @@
     "semanticCommitType": "fix"
   },
   "platformAutomerge": false,
+  "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "squash",
   "commitHourlyLimit": 0,
@@ -102,7 +104,6 @@
     "rebaseWhen": "auto",
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
-    "semanticCommitType": "chore",
     "extends": [
       "schedule:earlyMondays"
     ],

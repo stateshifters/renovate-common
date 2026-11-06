@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "automerge": true,
       "groupName": "testing library dependencies",
       "matchPackageNames": [
         "@testing-library{/,}**",
@@ -13,14 +12,12 @@
       "matchPackageNames": [
         "jest{/,}**"
       ],
-      "automerge": true,
       "groupName": "jest dependencies"
     },
     {
       "matchPackageNames": [
         "jsdom{/,}**"
       ],
-      "automerge": true,
       "groupName": "jsdom dependencies"
     }
   ]

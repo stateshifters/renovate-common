@@ -3,8 +3,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["@conform{/,}**", "@conform-to{/,}**"],
-      "groupName": "conform packages",
-      "automerge": true
+      "groupName": "conform packages"
     }
   ]
 }

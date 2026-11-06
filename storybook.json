@@ -6,7 +6,6 @@
         "storybook{/,}**",
         "@storybook{/,}**"
       ],
-      "automerge": true,
       "groupName": "storybook dependencies"
     }
   ]

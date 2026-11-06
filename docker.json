@@ -4,9 +4,6 @@
   "extends": [
     "customManagers:dockerfileVersions"
   ],
-  "docker-compose": {
-    "automerge": false
-  },
   "packageRules": [
     {
       "matchCategories": [
@@ -20,7 +17,6 @@
         "docker"
       ],
       "automerge": true,
-      "semanticCommitType": "chore",
       "matchUpdateTypes": [
         "pinDigest",
         "digest",

@@ -15,10 +15,6 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "groupName": "Terraform providers"
-    },
-    {
-      "matchManagers": ["terraform", "terraform-version", "tflint-plugin"],
-      "automerge": false
     }
   ]
 }

@@ -8,8 +8,6 @@
         "@types/react",
         "@types/react-dom"
       ],
-      "automerge": true,
-      "semanticCommitType": "chore",
       "groupName": "react monorepo"
     },
     {
@@ -17,7 +15,6 @@
         "react-email{/,}**",
         "@react-email{/,}**"
       ],
-      "automerge": true,
       "groupName": "react email dependencies"
     },
     {

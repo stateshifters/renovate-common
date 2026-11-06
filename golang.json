@@ -20,16 +20,14 @@
       "matchManagers": [
         "gomod"
       ],
-      "enabled": true,
-      "automerge": true
+      "enabled": true
     },
     {
       "matchManagers": [
         "gomod"
       ],
       "constraintsFiltering": "strict",
-      "enabled": true,
-      "automerge": true
+      "enabled": true
     },
     {
       "matchManagers": ["gomod"],

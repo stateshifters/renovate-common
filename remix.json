@@ -9,8 +9,6 @@
       "matchPackageNames": [
         "remix{/,}**"
       ],
-      "automerge": true,
-      "semanticCommitType": "chore",
       "groupName": "remix dependencies"
     },
     {
@@ -21,8 +19,6 @@
       "matchPackageNames": [
         "remix{/,}**"
       ],
-      "automerge": true,
-      "semanticCommitType": "chore",
       "groupName": "remix dependencies"
     }
   ]

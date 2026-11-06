@@ -5,7 +5,6 @@
       "matchPackageNames": [
         "*stylelint{/,}**"
       ],
-      "automerge": true,
       "groupName": "stylelint dependencies"
     }
   ]
